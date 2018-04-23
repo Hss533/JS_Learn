@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type:none;
+}
+body{
+    font-family: "微软雅黑";
+    color: #14191e;
+}
+.main{
+    width:1200px;
+    height:460px;
+    margin: 30px auto;
+    overflow: hidden;
+    /*超出范围之外的内容将其隐藏起来*/
+    position: relative;
+    broder:1px red ;
+}
+/*如果想让轮播图左右滑动那么将其样式改为float:left型*/
+/*现在的交互效果是隐藏和显示*/
+.banner{
+    width:1200px;
+    height: 460px;
+    overflow: hidden;
+
+}
+.banner_slider{
+    width:1200px;
+    height:460px;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
+}
+.slider1{
+
+    /*将图片作为背景图片*/
+    background-image: url(image/nini1.jpg);
+}
+.slider2{
+
+     /*将图片作为背景图片*/
+     background-image: url(image/nini2.jpg);
+ }
+.slider3{
+
+    /*将图片作为背景图片*/
+    background-image: url(image/nini3.jpg);
+}
+.slider-active{
+    display: block;
+}
+.button{
+    position:absolute;
+    width:40px;
+    height:80px;
+    left:244px;
+    top:50%;
+    margin-top: -40px;
+    background:url(image/arrow.png) no-repeat center center;
+}
+.button:hover {
+    /*背景颜色覆盖背景图片*/
+    background-color: #333;
+    opacity: 0.2;
+    filter: alpha(opacity=80);
+}
+.prev{
+    transform: rotate(180deg);
+}
+.next{
+    left:auto;
+    right:0;
+}
+.dots{
+    position: absolute;
+    right:0;
+    bottom:24px;
+    text-align: right;
+
+}
+.dots span{
+    display: inline-block;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:rgba(7,17,27,0.4);
+    box-shadow: 0 0 0 2px rgba(255, 255 ,255, 0.8);
+    margin-left:5px;
+    /*margin-right: 30px;*/
+}
+.dots span.active{
+    box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
+    background-color: #ffffff;
+}
+.menu_box{
+    position: absolute;
+    width:243px;
+    height: 460px;
+    background:rgba(7,17,27,0.5);
+    opacity:0.5;
+    z-index: 1;
+}
+.menu-content{
+    position: absolute;
+    width:243px;
+    height: 454px;
+    padding-top: 20px;
+
+}
